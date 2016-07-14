@@ -59,6 +59,6 @@ test('Validate pre-existing error blocks are not re-used', function() {
   input.trigger('change')
   input.trigger('focusout')
   ok(field_wrapper.hasClass('field_with_errors'));
-  ok(field_wrapper.find('span.error:contains("Error from Server")').size() === 1);
+  ok(field_wrapper.find('span.error:contains("Error from Server")').length === 1);
   ok(!field_wrapper.find('span.error:contains("is invalid")')[0]);
 });
